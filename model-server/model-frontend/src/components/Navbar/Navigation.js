@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
   textField: {
-    width: '25ch',
+    width: '20ch',
   },
 }));
 
@@ -48,7 +48,7 @@ export default function Navigation(props) {
   useEffect(() => {
 
     const url = `http://3.128.213.23/modelSearch/${props.keyword}`
-
+    console.log(props.keywords)
     axios.get(url)
         .then(res =>{
           props.passChildData(res.data);

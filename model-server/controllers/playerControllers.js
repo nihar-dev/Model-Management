@@ -36,8 +36,8 @@ export const getModelWithID = (req,res) =>{
 };
 
 export const getModelWithMeta = (req,res) =>{
-    const search_type = Object.keys(req.query).length !== 0 ? req.query : {firstName : new RegExp('^' +req.params.ModelName , 'i')}
-    console.log(search_type)
+    const search_type = Object.keys(req.query).length !== 0 ? req.query  : req.params.ModelName === 'allData' ? {} : {firstName : new RegExp('^' +req.params.ModelName , 'i')}
+    
     
     DataScema.find(search_type, (err,DataScema) => {
         if(err) {
@@ -54,16 +54,6 @@ export const updateModel = (req,res) =>{
             res.send(err);
         }
         res.json(DataScema);
-    })
-};
-
-export const deleteModel = (req,res) =>{
-
-    DataScema.deleteOne({_id:req.params.PlayerId}, (err,DataScema) => {
-        if(err) {
-            res.send(err);
-        }
-        res.json({message: 'successfully deleted player'});
     })
 };
 

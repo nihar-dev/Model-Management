@@ -143,7 +143,7 @@ export default function ModelForm(props){
               <TextField 
                 {...bindFirstName}
                 autoFocus = {true}
-                required id="standard-required" 
+                id="standard-required" 
                 label="Name" 
                  />
 

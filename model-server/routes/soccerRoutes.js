@@ -3,7 +3,6 @@ import {
     getModel , 
     getModelWithID,
     updateModel,
-    deleteModel,
     getModelWithMeta
 }from '../controllers/playerControllers';
 
@@ -18,9 +17,8 @@ const routes = (app) =>{
     //get specific player by id
         .get(getModelWithID)
     //update specific player by id
-        .put(updateModel)
+        .put(updateModel);
     //update specific player by id
-        .delete(deleteModel);
 
     app.route('/modelSearch/:ModelName')
     //get specific player by id

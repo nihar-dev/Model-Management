@@ -89,7 +89,7 @@ const  App = () => {
     initialScreen: true,
 
   });
-  const [keyword,setKeyword] = useState('d')
+  const [keyword,setKeyword] = useState('allData')
    
 
 
