@@ -3,8 +3,11 @@ import mongoose from 'mongoose'
 import bodyparser from 'body-parser'
 import routes from './routes/soccerRoutes'
 import cors from 'cors';
+import path from 'path'
+
 
 const app = express();
+app.use(express.static(Path.join(__dirname,"model-frontend/build")))
 //cors setup
 app.use(cors())
 app.options('*', cors())
