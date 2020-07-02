@@ -47,7 +47,7 @@ export default function Navigation(props) {
 
   useEffect(() => {
 
-    const url = `http://localhost:4002/modelSearch/${props.keyword}`
+    const url = `http://3.128.213.23/modelSearch/${props.keyword}`
 
     axios.get(url)
         .then(res =>{

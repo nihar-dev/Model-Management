@@ -71,7 +71,7 @@ export default function ModelSingle(props) {
   const submitHandler = (e) =>{
     e.preventDefault();
     console.log(props.items._id,value);
-    const url = `http://localhost:4002/models/${props.items._id}`
+    const url = `http://3.128.213.23/models/${props.items._id}`
     
     axios.put(url, value)
         .then(res =>{

@@ -71,7 +71,7 @@ export default function ModelForm(props){
 
   const submitHandler = (e) =>{
     e.preventDefault();
-    const url = `http://localhost:4002/models`
+    const url = `http://3.128.213.23/models`
     console.log(imageData);
     axios.post(url, {
       'firstName': firstName,
